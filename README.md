@@ -320,14 +320,6 @@ Some ideas for future development:
 
 ---
 
-## 📄 License
-
-This project was created for educational purposes as part of a university Web Technologies assignment.
-
-If you plan to reuse or redistribute the project, add an appropriate license to the repository.
-
----
-
 <div align="center">
 
 ### 🏁 Find the keys. Avoid the traps. Escape the maze.
