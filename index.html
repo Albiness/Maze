@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape the Maze</title>
+  <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="css.css">
+  <meta name="description" content="Hra o labyrinte plná hádaniek, výziev a dobrodružstva. Preskúmaj spletité chodby, vyrieš záhady a nájdi cestu k cieľu!">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    #tasks, #gameCanvas, #timer, #info, #exit {
+      margin: 10px 0;
+
+    }
+  </style>
+
+
+
+
+</head>
+<body>
+<div id="menu">
+  <h1>Escape the Maze</h1>
+  <button class="menu-button" id="continue-game">Pokračovať</button>
+  <button class="menu-button" id="new-game">Nová hra</button>
+  <button class="menu-button" id="level-select">Výber úrovne</button>
+</div>
+<div id="level-menu" style="display: none;">
+  <h1>Výber úrovne</h1>
+  <div id="level-buttons"></div>
+  <button class="menu-button" id="back-to-menu">Späť</button>
+</div>
+<div id="container">
+<div id="tasks" style="display:none;"></div>
+<canvas id="gameCanvas"></canvas>
+<div id="timer" style="font-size: 20px; margin-top: 10px; display: none;">Time: 0 sec</div>
+<div id="info" style="display: none;"><button class="back" id="back-to-main-menu" style="display: none;">Späť na menu</button></div>
+
+<div id="exit" style="display:none;"></div>
+</div>
+<script src="Maze.js"></script>
+
+</body>
+</html>

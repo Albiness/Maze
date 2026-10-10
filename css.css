@@ -1,0 +1,282 @@
+
+    /* Reset default styles and set base styles for the game */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #1a1a2e);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Main menu styling */
+#menu, #level-menu {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    width: 400px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+    .menu-button{
+        background: #4CAF50;
+    }
+/* Button styling */
+.menu-button,.level-buttons {
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.menu-button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+.level-buttons:hover{
+    background: #305934;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgb(69, 159, 73);
+}
+.menu-button:active {
+    transform: translateY(1px);
+}
+
+/* Game canvas styling */
+#gameCanvas {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Timer styling */
+#timer {
+    background: rgb(255, 0, 0);
+    backdrop-filter: blur(5px);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Info section styling */
+#info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    max-width: 90%;
+    width: 600px;
+}
+
+/* Task section styling */
+#tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 1px;
+    max-width: 90%;
+    width: 600px;
+}
+
+#tasks h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between "Level" text and the question mark button */
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Info button styling */
+.info-button {
+    background: #4CAF50;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.info-button:hover,#victory-return-btn:hover,#victory-restart-btn:hover,#failure-restart-btn:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+#failure-menu-btn:hover{
+    background: #a04545;
+    transform: scale(1.1);
+    }
+/* Level details styling */
+#level-details {
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+#level-details p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+    .p1{
+        font-size: 2rem;
+    }
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .p1{
+        font-size: 1.2rem;
+    }
+
+    .menu-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #menu, #level-menu {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    #gameCanvas {
+        margin: 5px;
+    }
+}
+
+
+/* Game controls section styling */
+#game-instructions,#game-description {
+    margin-top: 20px;
+}
+
+#game-instructions h2,
+#game-instructions h3,
+#game-instructions h4 {
+    color: #4CAF50;
+    margin: 15px 0 10px 0;
+}
+
+#game-instructions ul,#game-description ul{
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#game-instructions li,#game-description li  {
+    margin: 8px 0;
+    position: relative;
+}
+
+#game-instructions li:before,#game-description li:before {
+    content: "•";
+    color: #4CAF50;
+    position: absolute;
+    left: -15px;
+}
+
+/* Back button styling */
+.back {
+    background: #4CAF50;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make button respect margin auto */
+}
+
+.back:hover {
+    background: #4CAF50;
+    transform: translateY(-2px);
+}
+    .level-buttons{
+        background: #324c30;
+
+    }
+/* Štýly pre tlačenú verziu */
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    #menu, #level-menu, #timer, #exit, canvas,#info {
+        display: none !important;
+    }
+
+    #game-description, #game-instructions {
+        page-break-inside: avoid;
+        margin: 0;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    /* Zabezpečenie, aby sa obsah rozdelil na viacero strán podľa potreby */
+    @page {
+        margin: 15mm;
+    }
+}
+
+/* Responzívny dizajn pre mobilné zariadenia */
+@media (max-width: 600px) {
+    #game-description, #game-instructions {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+    @media (max-width: 325px) {
+        body,h2,h3,h4,h5,h6,.menu-button,.tasks,#exit,#info,#back-to-main-menu,.level-buttons {
+            font-size: 10px;
+        }
+        h1,p{
+            font-size: 0.8rem;
+        }
+    }
